@@ -4,16 +4,31 @@ public class BankAccount {
 
     private String name;
     private double balance;
+    private double minBalance;
 
     public double getBalance() {
         return balance;
     }
 
-    private double minBalance;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setMinBalance(double minBalance) {
+        this.minBalance = minBalance;
+    }
 
     public void setBalance(double balance) {
         this.balance = balance;
     }
+    public double getMinBalance() {
+        return minBalance;
+    }
+
 
     public BankAccount(String name, double balance, double minBalance) {
         this.name=name;
@@ -85,9 +100,7 @@ public class BankAccount {
         this.balance+=amount;
     }
 
-    public double getMinBalance() {
-        return minBalance;
-    }
+
 
     public void withdraw(double amount) throws Exception {
         // Remember to throw "Insufficient Balance" exception, if the remaining amount would be less than minimum balance

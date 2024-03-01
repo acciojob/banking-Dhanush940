@@ -32,6 +32,15 @@ public class CurrentAccount extends BankAccount{
             throw new Exception("Valid License can not be generated");
         this.tradeLicenseId=rearrangedString;
     }
+
+    public String getTradeLicenseId() {
+        return tradeLicenseId;
+    }
+
+    public void setTradeLicenseId(String tradeLicenseId) {
+        this.tradeLicenseId = tradeLicenseId;
+    }
+
     public String isPossibleToRearrange(String s)
     {
         int[] hash = new int[26];
