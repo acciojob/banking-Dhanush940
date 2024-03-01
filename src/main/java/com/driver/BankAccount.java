@@ -47,9 +47,9 @@ public class BankAccount {
         //If it is not possible, throw "Account Number can not be generated" exception
 
         String result=generateAccountNumberIfPossible(digits,sum);
-        if(result.length()!=0)
-            return result;
-        throw new Exception("Account Number can not be generated");
+        if(result.length()==0)
+            throw new Exception("Account Number can not be generated");
+        return result;
     }
 
     public String generateAccountNumberIfPossible(int digits,int sum)
